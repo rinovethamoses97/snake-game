@@ -32,11 +32,7 @@ class Snake{
     }
     setDir(xd,yd){
         if((xd==10 && yd==0 && this.xDir==-10 && this.yDir==0)||(xd==-10 && yd==0 && this.xDir==10 && this.yDir==0)||(xd==0 && yd==-10 && this.xDir==0 && this.yDir==10)||(xd==0 && yd==10 && this.xDir==0 && this.yDir==-10)){
-            var temp=this.body;
-            this.body=[];
-            for(var i=temp.length-1;i>=0;i--){
-                this.body.push(temp[i]);
-            }
+            this.body.reverse();
         }
         this.xDir=xd;
         this.yDir=yd;
