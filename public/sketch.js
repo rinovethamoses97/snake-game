@@ -2,7 +2,7 @@ var snake;
 var food;
 var foodImage;
 function preload(){
-    foodImage=loadImage("./food.jpg");
+    foodImage=loadImage("./food.png");
 }
 function setup(){
     createCanvas(200,200);

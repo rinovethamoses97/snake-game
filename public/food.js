@@ -4,8 +4,9 @@ class Food{
         this.y=y;
     }
     show(){
-        fill(255,0,0);
+        noFill();
         rect(this.x,this.y,10,10);
+        image(foodImage,this.x,this.y,10,10);
     }
     update(){
         this.x=floor(random(20))*10
