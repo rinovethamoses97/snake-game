@@ -9,7 +9,7 @@ function draw(){
     frameRate(12);
     background(0);
     snake.update();
-    if(snake.wallHitCheck()){
+    if(snake.wallHitCheck()||snake.selfCollisionCheck()){
         alert("Game Over");
         noLoop();
     }

@@ -47,7 +47,6 @@ class Snake{
     }
     eat(){
         this.body.push(createVector(this.temp.x,this.temp.y));
-        this.update();
     }
     eatFoodCheck(food){
         if(this.body[0].x==food.x && this.body[0].y==food.y){
@@ -58,6 +57,14 @@ class Snake{
     wallHitCheck(){
         if(this.body[0].x<0 || this.body[0].x+10>width ||this.body[0].y<0 || this.body[0].y+10>height){
             return true;
+        }
+        return false;
+    }
+    selfCollisionCheck(){
+        for(var i=1;i<this.body.length;i++){
+            if(collideRectRect(this.body[0].x,this.body[0].y,9,9,this.body[i].x,this.body[i].y,9,9)){
+                return true;    
+            }
         }
         return false;
     }
