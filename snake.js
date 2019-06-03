@@ -56,7 +56,7 @@ class Snake{
         }
     }
     wallHitCheck(){
-        if(this.body[0].x<0 || this.body[0].x>width ||this.body[0].y<0 || this.body[0].y>height){
+        if(this.body[0].x<0 || this.body[0].x+10>width ||this.body[0].y<0 || this.body[0].y+10>height){
             return true;
         }
         return false;
