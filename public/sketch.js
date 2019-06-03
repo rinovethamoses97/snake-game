@@ -1,5 +1,9 @@
 var snake;
 var food;
+var foodImage;
+function preload(){
+    foodImage=loadImage("./food.jpg");
+}
 function setup(){
     createCanvas(200,200);
     snake=new Snake();
