@@ -64,8 +64,8 @@ class Snake{
     }
     selfCollisionCheck(){
         for(var i=1;i<this.body.length;i++){
-            if(collideRectRect(this.body[0].x,this.body[0].y,9,9,this.body[i].x,this.body[i].y,9,9)){
-                return true;    
+            if(this.body[0].x==this.body[i].x && this.body[0].y==this.body[i].y){
+                return true;
             }
         }
         return false;
