@@ -30,7 +30,4 @@ function keyPressed(){
     else if(keyCode===UP_ARROW){
         snake.setDir(0,-10);
     }
-    else{
-        snake.eat();
-    }
 }
