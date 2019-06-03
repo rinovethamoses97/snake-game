@@ -11,7 +11,7 @@ function draw(){
     snake.update();
     if(snake.wallHitCheck()||snake.selfCollisionCheck()){
         alert("Game Over");
-        noLoop();
+        snake.restart();
     }
     snake.show();
     food.show();
